@@ -8,7 +8,8 @@ export const Rotas = () =>{
     return(
         <Router>
             <Routes>
-                <Route path="/login" element={<Login />} />
+                
+                
                 <Route path="/registre" element={<Registre />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/" element={<Login />} />
