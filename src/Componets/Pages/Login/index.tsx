@@ -26,24 +26,41 @@ const Login: React.FC = () => {
   }
 
   return (
-    <div className="container">
-      <h1>Login</h1>
-      <input
-        type="text"
-        placeholder="Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Senha"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleLogin}>Entrar</button>
-      <p>
-        Não tem uma conta? <Link to="/registre" >Registre-se</Link>
-      </p>
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="max-w-md w-full space-y-8 p-4">
+        <h1 className="text-center text-3xl font-extrabold text-gray-900">Login</h1>
+
+        <div className="flex flex-col space-y-4">
+          <input
+            type="text"
+            placeholder="Email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            className="w-full p-2 rounded-md"
+          />
+          <input
+            type="password"
+            placeholder="Senha"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full p-2 rounded-md"
+          />
+        </div>
+
+        <button
+          className="w-full bg-green-500 text-white p-2 rounded-md"
+          onClick={handleLogin}
+        >
+          Entrar
+        </button>
+
+        <p>
+          Não tem uma conta?{" "}
+          <Link to="/registre" className="text-blue-700">
+            Registre-se
+          </Link>
+        </p>
+      </div>
     </div>
   );
 };

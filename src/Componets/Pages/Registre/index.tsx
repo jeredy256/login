@@ -25,26 +25,44 @@ const Register: React.FC = () => {
     return null;
   }
 
-  return (
-    <div className="container">
-      <h1>Registro</h1>
+  return (<div className="min-h-screen flex flex-col items-center justify-center bg-gray-50">
+  <div className="max-w-md w-full space-y-8 p-4">
+    <h1 className="text-center text-3xl font-extrabold text-gray-800">Registro</h1>
+
+    <div className="flex flex-col space-y-4">
       <input
         type="text"
         placeholder="Email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
+        className="w-full p-2 rounded-md"
       />
       <input
         type="password"
         placeholder="Senha"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
+        className="w-full p-2 rounded-md"
       />
-      <button onClick={handleRegister}>Registrar</button>
-      <p>
-        Já tem uma conta? <Link to="/login">Faça login</Link>
-      </p>
     </div>
+
+    <button
+      onClick={handleRegister}
+      className="w-full bg-green-500 text-white p-2 rounded-md"
+    >
+      Registrar
+    </button>
+
+    <p>
+      Já tem uma conta?{" "}
+      <Link to="/login" className="text-blue-600">
+        Faça login
+      </Link>
+    </p>
+  </div>
+</div>
+
+    
   );
 };
 

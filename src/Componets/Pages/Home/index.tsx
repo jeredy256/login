@@ -14,9 +14,10 @@ const Home: React.FC = () => {
 
   return (
     <div className="container">
-      <h1>Página Protegida</h1>
-      <p>Olá, {user.email}!</p>
-      <Link to="/login" onClick={() => auth.signOut()}>Logout</Link>
+      <h1 className="text-4xl">testando</h1>
+      <button><Link to="https://furbrcomics.netlify.app/">click</Link></button>
+      <br/>
+      <a className="text-blue-600 text-2xl" to="/login" onClick={() => auth.signOut()}>Logout</a>
     </div>
   );
 };
