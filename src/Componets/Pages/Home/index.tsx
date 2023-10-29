@@ -15,7 +15,7 @@ const Home: React.FC = () => {
   return (
   <div className="container">
       <h1 className="text-4xl">testando</h1>
-      <button><Link to="https://furbrcomics.netlify.app/">click</Link></button>
+      <button className="text-red-900 bg-black"><Link to="/">click</Link></button>
       <br/>
       <Link className="text-blue-600 text-2xl" to="/login" onClick={() => auth.signOut()}>Logout</Link>
     </div>
