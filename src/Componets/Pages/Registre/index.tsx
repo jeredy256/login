@@ -13,7 +13,7 @@ const Register: React.FC = () => {
   const handleRegister = async () => {
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      navigate("/login"); // Redirecionar para a página de login após o registro
+      navigate("/"); // Redirecionar para a página de login após o registro
     } catch (error) {
       console.error("Erro de registro:", error);
       alert("Erro de registro. Verifique seu email e senha.");
